@@ -5,18 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    안녕하세요
+    <div class="collapse show" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">Collection of...</h5>
+            <span class="text-muted">일단 정보를 모아보자</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
 
-    <script defer src="/__/firebase/9.9.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/9.9.4/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/9.9.4/firebase-storage.js"></script>
 
-    <script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script defer type="module" src="/__/firebase/9.9.4/firebase-app.js"></script>
+    <script defer type="module" src="/__/firebase/9.9.4/firebase-firestore.js"></script>
+    <script defer type="module" src="/__/firebase/9.9.4/firebase-storage.js"></script>
+
+    <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "firebase/app";
         import { getAnalytics } from "firebase/analytics";
@@ -38,6 +58,12 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+        
+        
+        const db = getFirestore(app)
+        db.collection('topic').get().then((snapshot) => {
+            console.log(snapshot)
+        });
     </script>
 </body>
 
