@@ -1,22 +1,23 @@
 <template>
   <v-app>
-    <AppBar />
+    <!-- <AppBar />
     <v-main>
       <MainBoard />
-    </v-main>
+    </v-main> -->
+    <router-view></router-view>
   </v-app>
 </template>
 
 <script>
-import AppBar from "./components/AppBar";
-import MainBoard from "./components/MainBoard";
+// import AppBar from "./components/AppBar";
+// import MainBoard from "./components/MainBoard";
 
 export default {
   name: "App",
 
   components: {
-    AppBar,
-    MainBoard,
+    // AppBar,
+    // MainBoard,
   },
 
   data: () => ({
