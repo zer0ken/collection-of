@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import TopicView from '../views/TopicView.vue'
 
 Vue.use(VueRouter)
 
@@ -12,8 +11,8 @@ const routes = [{
     path: '/home',
     component: HomeView
 }, {
-    path: '/:topic',
-    component: TopicView
+    path: '/topic/:topic',
+    component: () => import( '../views/TopicView.vue')
 }]
 
 const router = new VueRouter({

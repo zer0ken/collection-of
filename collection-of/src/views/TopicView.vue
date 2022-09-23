@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    {{$route.params.topic}}
+  </div>
 </template>
 
 <script>
