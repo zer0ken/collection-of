@@ -1,9 +1,5 @@
 <template>
   <v-app>
-    <!-- <AppBar />
-    <v-main>
-      <MainBoard />
-    </v-main> -->
     <router-view></router-view>
   </v-app>
 </template>

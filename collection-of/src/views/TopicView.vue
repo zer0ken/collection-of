@@ -9,6 +9,3 @@ export default {
   name: "TopicView",
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
